@@ -8,8 +8,8 @@ const Newsboard = ({category}) => {
     const [article, setarticle] = useState([])
 
     useEffect(() => {
-      const url=`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${import.meta.env.VITE_API}`;
-
+      
+      async()=>{const url=await fetch(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${import.meta.env.VITE_API}`);}
       fetch(url).then(reponse=>reponse.json()).then(data=>setarticle(data.articles));
     },[category])
     
