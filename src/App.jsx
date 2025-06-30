@@ -4,11 +4,11 @@ import { useState } from "react"
 
 function App() {
 
-  const [cateogory, setCateogory] = useState("general");
+  const [category, setCategory] = useState("general");
   return (
     <>
-    <Navbar setCateogory={setCateogory}/>
-    <Newsboard cateogory={cateogory}/>
+    <Navbar setCategory={setCategory}/>
+    <Newsboard category={category}/>
     </>
   )
 }
