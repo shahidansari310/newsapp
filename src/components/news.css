@@ -1,0 +1,11 @@
+.cardss {
+  background: #1b414f;
+  background: linear-gradient(
+    90deg,
+    rgba(27, 65, 79, 1) 10%,
+    rgba(58, 79, 64, 1) 41%,
+    rgba(34, 107, 57, 1) 70%,
+    rgba(112, 107, 74, 1) 94%
+  );
+  box-shadow: 5px 5px 20px black ;
+}

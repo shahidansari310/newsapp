@@ -1,8 +1,9 @@
 import React from "react";
+import "./news.css"
 
 const Newsitem = ({title,description,url,src}) => {
   return (
-    <div className="card bg-dark text-white mb-3 d-inline-block place-self-center mx-3 my-3 px-2 py-2" style={{maxWidth:"345px"}}>
+    <div className="card cardss bg-dark text-white mb-3 d-inline-block place-self-center mx-3 my-3 px-2 py-2" style={{maxWidth:"345px"}}>
       <img src={src?src:"https://previews.123rf.com/images/bryljaev/bryljaev1603/bryljaev160300027/55043818-news-minimal-line-icon.jpg"} style={{height:"200px",width:"360px"}} className="card-img-top" alt= "..." />
       <div className="card-body">
         <h5 className="card-title">{title.slice(0,50)}</h5>

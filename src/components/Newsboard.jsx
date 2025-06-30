@@ -15,7 +15,7 @@ const Newsboard = ({category}) => {
     
   return (
     <div>
-      <h2 className='y text-center mt-4 '>Latest <span className=' transition-transform duration-300 hover:scale-110 badge bg-danger'>News</span></h2>
+      <h2 className='y text-center mt-4  transition-transform duration-300 hover:scale-110'>Latest <span className=' badge bg-danger'>News</span></h2>
       {article.map((news,index)=>{
         return <Newsitem 
         key={index} 
