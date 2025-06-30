@@ -9,7 +9,8 @@ const Newsboard = ({category}) => {
 
     useEffect(() => {
       const fetxhnews=async()=>{      
-        const res = await fetch(`http://localhost:5000/api/news?category=${category}`);
+        // const res = await fetch(`http://localhost:5000/api/news?category=${category}`);
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/news?category=general`);
         const data = await res.json();
           setarticle(data.articles);
     }

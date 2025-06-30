@@ -9,7 +9,10 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Allow requests from React frontend (adjust if needed)
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:5173','https://newsapp-by-shahid.vercel.app/'], // Replace with your frontend URL
+  credentials: true
+}));
 
 app.get('/api/news', async (req, res) => {
   const category = req.query.category || 'general';
