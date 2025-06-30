@@ -4,12 +4,12 @@ const Navbar = ({ setCategory }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const categories = [
-    "technology",
-    "business",
-    "health",
-    "science",
-    "sports",
-    "entertainment",
+    "Technology",
+    "Business",
+    "Health",
+    "Science",
+    "Sports",
+    "Entertainment",
   ];
 
   return (
@@ -17,7 +17,7 @@ const Navbar = ({ setCategory }) => {
       <div className="container-fluid">
         {/* Logo */}
         <div className="navbar-brand text-white text-3xl font-bold">
-          <span className="badge bg-light text-dark p-3">NewsWave</span>
+          <span className="badge bg-light text-dark p-3">&lt; NewsWave /&gt;</span>
         </div>
 
         <div>
