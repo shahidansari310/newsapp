@@ -8,13 +8,33 @@ const Newsboard = ({category}) => {
     const [article, setarticle] = useState([])
 
     useEffect(() => {
-      const fetxhnews=async()=>{      
-        // const res = await fetch(`http://localhost:5000/api/news?category=${category}`);
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/news?category=general`);
-        const data = await res.json();
-          setarticle(data.articles);
-    }
-    fetxhnews();
+    //   const fetxhnews=async()=>{      
+    //      console.log("Fetching news for:", category);
+    //     // // const res = await fetch(`http://localhost:5000/api/news?category=${category}`);
+    //     // const res = await fetch(`${import.meta.env.VITE_API_URL}/api/news?category=general`);
+    //     // const data = await res.json();
+    //     //   setarticle(data.articles);
+
+    //       fetch(`/api/news?category=${category}`)
+    // .then(res => res.json())
+    // .then(data => setarticle(data.articles));
+    // }
+    // fetxhnews();
+
+     const fetchNews = async () => {
+      const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+      console.log("Fetching from:", `${BACKEND_URL}/api/news?category=${category}`);
+      
+      try {
+        const response = await fetch(`${BACKEND_URL}/api/news?category=${category}`);
+        const data = await response.json();
+        setarticle(data.articles);
+      } catch (error) {
+        console.error("Error fetching news:", error);
+      }
+    };
+
+    fetchNews();
     },[category])
     
   return (

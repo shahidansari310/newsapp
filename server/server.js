@@ -15,6 +15,8 @@ app.get('/api/news', async (req, res) => {
   const category = req.query.category || 'general';
   const apiKey = process.env.NEWS_API_KEY;
 
+  console.log("Backend received category:", category);
+
   try {
     const response = await fetch(
       `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${apiKey}`
