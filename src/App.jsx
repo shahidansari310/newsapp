@@ -1,11 +1,10 @@
-import Dropdown from "./components/Dropdown"
-import Spiner from "./components/Spiner"
+import Navbar from "./components/Navbar"
 
 function App() {
 
   return (
     <>
-    
+    <Navbar/>
     </>
   )
 }
