@@ -38,7 +38,7 @@ const Navbar = ({ setCategory }) => {
               {categories.map((category) => (
                 <li
                   key={category}
-                  className="px-4 py-2 hover:bg-purple-100 text-gray-800 font-medium capitalize cursor-pointer transition"
+                  className="py-2 hover:bg-purple-100 text-gray-800 font-medium capitalize cursor-pointer transition"
                   onClick={() => {
                     setCategory(category);
                     setIsDropdownOpen(false);
