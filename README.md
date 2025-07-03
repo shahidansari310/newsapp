@@ -4,8 +4,8 @@
 
 ## 🔗 Live Demo
 
-Check out the live project here: [NewsWave Live]([https://your-deployment-link.com](https://newsapp-by-shahid.vercel.app/))
-
+Check out the live project here: [NewsWave Live]([https://newsapp-by-shahid.vercel.app/])
+"https://newsapp-by-shahid.vercel.app/"
 
 ## 🚀 Features
 
