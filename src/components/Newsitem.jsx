@@ -11,10 +11,11 @@ const Newsitem = ({ title, description, url, src, source, date }) => {
       className="bg-white dark:bg-zinc-900 text-black dark:text-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto hover:scale-105 transition-transform duration-300 border border-gray-200 dark:border-gray-700"
     >
       <img
-        src={
-          src ||
-          "https://previews.123rf.com/images/bryljaev/bryljaev1603/bryljaev160300027/55043818-news-minimal-line-icon.jpg"
-        }
+        src={src || "/news.jpg"}
+        onError={(e) => {
+          e.target.onerror = null;
+          e.target.src = "/news.jpg";
+        }}
         alt="News"
         className="w-full h-48 object-cover"
       />
