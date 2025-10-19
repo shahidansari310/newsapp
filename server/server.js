@@ -8,7 +8,6 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Allow requests from React frontend (adjust if needed)
 app.use(cors()); 
 
 app.get('/api/news', async (req, res) => {
